@@ -1,0 +1,33 @@
+load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
+load("//krita/private:toolchain.bzl", "current_krita_py_library")
+
+exports_files([
+    "defs.bzl",
+    "extensions.bzl",
+])
+
+toolchain_type(
+    name = "toolchain_type",
+    visibility = ["//visibility:public"],
+)
+
+bzl_library(
+    name = "defs_bzl",
+    srcs = ["defs.bzl"] + glob(["krita_*.bzl"]),
+    visibility = ["//visibility:public"],
+    deps = ["//krita/private:bzl_lib"],
+)
+
+bzl_library(
+    name = "extensions_bzl",
+    srcs = ["extensions.bzl"],
+    visibility = ["//visibility:public"],
+    deps = [
+        "//krita/private:bzl_lib",
+    ],
+)
+
+current_krita_py_library(
+    name = "current_pykrita",
+    visibility = ["//visibility:public"],
+)

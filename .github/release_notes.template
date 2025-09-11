@@ -1,0 +1,13 @@
+# {version}
+
+```python
+http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+http_archive(
+    name = "rules_krita",
+    integrity = "sha256-{sha256_base64}",
+    urls = ["https://github.com/abrisco/rules_krita/releases/download/{version}/rules_krita-{version}.tar.gz"],
+)
+```
+
+Additional documentation can be found at: https://github.com/abrisco/rules_krita

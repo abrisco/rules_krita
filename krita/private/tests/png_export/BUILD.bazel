@@ -1,0 +1,13 @@
+load("//krita:krita_export.bzl", "krita_export")
+
+krita_export(
+    name = "smiley_png",
+    out = "smiley.png",
+    kra_file = "smiley.kra",
+)
+
+krita_export(
+    name = "smiley_tiff",
+    out = "smiley.tiff",
+    kra_file = "smiley.kra",
+)
