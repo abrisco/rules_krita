@@ -184,13 +184,12 @@ krita_export(<a href="#krita_export-name">name</a>, <a href="#krita_export-data"
 <pre>
 load("@rules_krita//krita:defs.bzl", "krita_toolchain")
 
-krita_toolchain(<a href="#krita_toolchain-name">name</a>, <a href="#krita_toolchain-data">data</a>, <a href="#krita_toolchain-krita">krita</a>, <a href="#krita_toolchain-kritarunner">kritarunner</a>, <a href="#krita_toolchain-pykrita">pykrita</a>)
+krita_toolchain(<a href="#krita_toolchain-name">name</a>, <a href="#krita_toolchain-krita">krita</a>, <a href="#krita_toolchain-kritarunner">kritarunner</a>, <a href="#krita_toolchain-pykrita">pykrita</a>)
 </pre>
 <p>Define a toolchain for Krita rules.</p>
 <p><strong>ATTRIBUTES</strong></p>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left">Name</th><th style="text-align: left">Description</th><th style="text-align: left">Type</th><th style="text-align: left">Mandatory</th><th style="text-align: left">Default</th></tr></thead><tbody>
 <tr><td style="text-align: left"><a id="krita_toolchain-name"></a>name</td><td style="text-align: left">A unique name for this target.</td><td style="text-align: left"><a href="https://bazel.build/concepts/labels#target-names">Name</a></td><td style="text-align: left">required</td><td style="text-align: left"></td></tr>
-<tr><td style="text-align: left"><a id="krita_toolchain-data"></a>data</td><td style="text-align: left">Runfiles for the krita binaries</td><td style="text-align: left"><a href="https://bazel.build/concepts/labels">Label</a></td><td style="text-align: left">optional</td><td style="text-align: left"><code>None</code></td></tr>
 <tr><td style="text-align: left"><a id="krita_toolchain-krita"></a>krita</td><td style="text-align: left">The path to a krita binary.</td><td style="text-align: left"><a href="https://bazel.build/concepts/labels">Label</a></td><td style="text-align: left">required</td><td style="text-align: left"></td></tr>
 <tr><td style="text-align: left"><a id="krita_toolchain-kritarunner"></a>kritarunner</td><td style="text-align: left">The path to a kritarunner binary.</td><td style="text-align: left"><a href="https://bazel.build/concepts/labels">Label</a></td><td style="text-align: left">required</td><td style="text-align: left"></td></tr>
 <tr><td style="text-align: left"><a id="krita_toolchain-pykrita"></a>pykrita</td><td style="text-align: left">The label to a <a href="https://docs.krita.org/en/user_manual/python_scripting/introduction_to_python_scripting.html">Krita Python API</a> target.</td><td style="text-align: left"><a href="https://bazel.build/concepts/labels">Label</a></td><td style="text-align: left">required</td><td style="text-align: left"></td></tr>

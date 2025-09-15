@@ -165,7 +165,7 @@
 <h2 id="krita"><a class="header" href="#krita">krita</a></h2>
 <pre>
 krita = use_extension("@rules_krita//krita:extensions.bzl", "krita")
-krita.toolchain(<a href="#krita.toolchain-name">name</a>, <a href="#krita.toolchain-version">version</a>)
+krita.toolchain(<a href="#krita.toolchain-name">name</a>, <a href="#krita.toolchain-urls">urls</a>, <a href="#krita.toolchain-version">version</a>)
 </pre>
 <p>Bzlmod extensions for Krita</p>
 <p><strong>TAG CLASSES</strong></p>
@@ -175,6 +175,7 @@ krita.toolchain(<a href="#krita.toolchain-name">name</a>, <a href="#krita.toolch
 <p><strong>Attributes</strong></p>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left">Name</th><th style="text-align: left">Description</th><th style="text-align: left">Type</th><th style="text-align: left">Mandatory</th><th style="text-align: left">Default</th></tr></thead><tbody>
 <tr><td style="text-align: left"><a id="krita.toolchain-name"></a>name</td><td style="text-align: left">The name of the toolchain.</td><td style="text-align: left"><a href="https://bazel.build/concepts/labels#target-names">Name</a></td><td style="text-align: left">required</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><a id="krita.toolchain-urls"></a>urls</td><td style="text-align: left">Url templates to use for downloading Krita.</td><td style="text-align: left">List of strings</td><td style="text-align: left">optional</td><td style="text-align: left"><code>["https://download.kde.org/Attic/krita/{semver}/{artifact}"]</code></td></tr>
 <tr><td style="text-align: left"><a id="krita.toolchain-version"></a>version</td><td style="text-align: left">The version of Krita to download.</td><td style="text-align: left">String</td><td style="text-align: left">optional</td><td style="text-align: left"><code>"5.2.6"</code></td></tr>
 </tbody></table>
 </div>
